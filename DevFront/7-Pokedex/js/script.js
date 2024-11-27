@@ -91,6 +91,7 @@ allTypes.forEach(element => {
     } else {
         div.addEventListener("click", async ()=> {
             updateCards(filterType(await getData(generation), ""))
+            filtreTypeGlobal = ""
     })
     }
     typesDiv.appendChild(div)
