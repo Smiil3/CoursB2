@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+          <div class="form__group">
+            <label for="nom">NOM</label>
+            <input type="text" name="nom" id="nom" pattern="[A-Za-z].{1,20}">
+          </div>
+          <div class="form__group">
+            <label for="prenom">PRENOM</label>
+            <input type="text" name="prenom" id="prenom" pattern="[A-Za-z].{1,20}">
+          </div>
+          <div class="form__group">
+            <label for="email">EMAIL</label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="form__group">
+            <label for="boisson-pref">Quel est votre boisson préférée ?</label>
+
+            <select name="boisson" id="boisson-pref">
+              <option value="jdt">Jus de tomate</option>
+              <option value="coca">Coca</option>
+              <option value="orangina">Orangina</option>
+            </select>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

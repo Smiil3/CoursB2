@@ -1,0 +1,84 @@
+   html {
+    height: 92%;
+} 
+body {
+    background-color: #dbdbdb;
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+    width: 100%;
+    margin: auto;  
+    height: 100%; 
+}
+nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo {
+    margin: 5px 10px;
+    width: 50px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+#bold {
+    font-weight: bold;
+}
+#italic {
+    font-style: italic;
+}
+main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+#main_container {
+    width: 1024px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: auto;
+}
+#first_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#desc_container {
+    width: 50%;
+}
+#desc_container p {
+    margin: 0%;
+}
+#cocktail{
+    width: 40%;
+}
+#second_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#recette_container {
+    width: 50%;
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+}

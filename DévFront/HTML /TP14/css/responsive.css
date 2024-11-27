@@ -1,0 +1,62 @@
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1024px */
+@media all and (max-width:1024px) {
+    #main_container{
+        width: 80%;
+        padding:5%;
+    }
+    nav ul {
+        width: 60%;
+    }
+}  
+
+@media all and (max-width:425px) {
+    html {
+        height: unset;
+    }
+    #main_container{
+        width: 80%;
+        padding:5%;
+
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav ul {
+        width: 60%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    nav li a {
+        font-size: 15px;
+    }
+    #first_container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #second_container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #desc_container {
+        width: 90%;
+    }
+    #ingredients_container {
+        width: 100%;
+    }
+    #recette_container {
+        width: 100%;
+    }
+    #cocktail {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    footer {
+        position: block;
+    }
+    main {
+        margin-bottom: 10%;
+    }
+}  
