@@ -1,0 +1,15 @@
+.icon {
+    width: 25px;
+}
+.navbar{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    position: sticky;
+    padding: 5%;
+    background-color: #000000;
+}
