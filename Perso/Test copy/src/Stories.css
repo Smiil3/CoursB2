@@ -1,0 +1,42 @@
+.stories-container {
+    margin-top: 65px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px;
+    background-color: black; /* Assurez-vous que l'arrière-plan est noir */
+  }
+  
+  .story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .story-ring {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #ffcc00, #ff0066);
+    padding: 3px;
+  }
+  
+  .story-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: black;
+  }
+  
+  .story-username {
+    font-size: 12px;
+    max-width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour combien ? - WebSocket</title>
+</head>
+<body>
+    <h1>Jeu "Pour Combien ?"</h1>
+
+    <label for="name">Nom :</label>
+    <input id="name" type="text" placeholder="Votre nom" required>
+    
+    <button onclick="joinGame()">Rejoindre</button>
+
+    <div id="game" style="display:none;">
+        <label for="number">Nombre :</label>
+        <input id="number" type="number" placeholder="Entrez un nombre" required>
+        <button onclick="sendNumber()">Envoyer</button>
+    </div>
+
+    <ul id="messages"></ul>
+
+    <script>
+        const ws = new WebSocket('ws://10.103.135.173:8080'); // Remplace avec ton IP si besoin
+        let playerName = "";
+
+        ws.onmessage = (event) => {
+            const li = document.createElement('li');
+            li.textContent = event.data;
+            document.getElementById('messages').appendChild(li);
+
+            if (event.data.includes("Match trouvé")) {
+                document.getElementById('game').style.display = "block";
+            }
+        };
+
+        function joinGame() {
+            playerName = document.getElementById('name').value;
+            if (!playerName) {
+                alert("Entrez un nom !");
+                return;
+            }
+
+            ws.send(JSON.stringify({ action: "join", name: playerName }));
+        }
+
+        function sendNumber() {
+            const number = document.getElementById('number').value;
+            if (!number) {
+                alert("Entrez un nombre !");
+                return;
+            }
+
+            ws.send(JSON.stringify({ action: "play", name: playerName, number }));
+        }
+    </script>
+</body>
+</html>
